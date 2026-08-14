@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Boissons - Bobi</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                <h1>Bobi</h1>
+                <span>Association Humanitaire</span>
+            </div>
+
+            <a href="index.html" class="btn btn-primary">
+                ← Retour à l'accueil
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         CATALOGUE
+    ========================== -->
+
+    <main class="catalogue">
+
+        <div class="section-title">
+
+            <p>Notre épicerie solidaire</p>
+
+            <h2>🥤 Boissons disponibles</h2>
+
+        </div>
+
+
+        <p class="catalogue-intro">
+            Découvrez les boissons actuellement disponibles.
+            Les stocks peuvent évoluer selon les arrivages.
+        </p>
+
+
+        <div class="produits-grid">
+
+
+            <!-- =========================
+                 LORINA
+            ========================== -->
+
+            <div class="produit-card">
+
+                <img
+                    src="images/boissons/lorina1.jpg"
+                    alt="Lorina">
+
+                <div class="produit-content">
+
+                    <h3>Lorina</h3>
+
+                    <p class="produit-description">
+                        Bouteille de Lorina 1,25 L.
+                    </p>
+
+                    <div class="produit-footer">
+
+                        <span class="prix">
+                            0,50 €
+                        </span>
+
+                        <span class="stock disponible">
+                            Disponible
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        class="btn-produit"
+                        onclick="ouvrirProduit(
+                            'Lorina',
+                            '0,50 €',
+                            'Bouteille de Lorina 1,25 L.',
+                            'Disponible',
+                            [
+                                'images/boissons/lorina1.jpg',
+                                'images/boissons/lorina2.jpg'
+                            ]
+                        )">
+
+                        Voir le produit
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 LORINA SANS SUCRE
+            ========================== -->
+
+            <div class="produit-card">
+
+                <img
+                    src="images/boissons/lorina_sans_sucre.jpg"
+                    alt="Lorina Sans Sucre">
+
+                <div class="produit-content">
+
+                    <h3>Lorina Sans Sucre</h3>
+
+                   <p class="produit-description">
+    Bouteille de Lorina Sans Sucre 1,25 L.
+</p>
+
+                    <div class="produit-footer">
+
+                        <span class="prix">
+                            0,50 €
+                        </span>
+
+                        <span class="stock disponible">
+                            Disponible
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        class="btn-produit"
+                        onclick="ouvrirProduit(
+                            'Lorina Sans Sucre',
+                            '0,50 €',
+                            'Bouteille de Lorina 1,25 L sans sucre.',
+                            'Disponible',
+                            [
+                                'images/boissons/lorina_sans_sucre.jpg'
+                            ]
+                        )">
+
+                        Voir le produit
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 crazytiger
+            ========================== -->
+
+            <div class="produit-card">
+
+                <img
+                    src="images/boissons/crazytiger1.jpg"
+                    alt="Crazy tiger">
+
+                <div class="produit-content">
+
+                    <h3>Crazy tiger</h3>
+
+                    <p class="produit-description">
+                        Crazy tiger de 1 litre.
+                    </p>
+
+                    <div class="produit-footer">
+
+                        <span class="prix">
+                            0,60 €
+                        </span>
+
+                        <span class="stock disponible">
+                            Disponible
+                        </span>
+
+                    </div>
+                    <button
+                        class="btn-produit"
+                        onclick="ouvrirProduit(
+                            'Crazy tiger',
+                            '0,60 €',
+                            'Bouteille de crazy tiger.',
+                            'Disponible',
+                            [
+                                'images/boissons/crazytiger1.jpg',
+                                'images/boissons/crazytiger2.jpg',
+                                'images/boissons/crazytiger3.jpg',
+                                'images/boissons/crazytiger4.jpg'
+                            ]
+                        )">
+
+                        Voir le produit
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 EAU MINERALE
+            ========================== -->
+
+            <div class="produit-card">
+
+                <img
+                    src="images/boissons/eau.jpg"
+                    alt="Eau minérale">
+
+                <div class="produit-content">
+
+                    <h3>Eau minérale</h3>
+
+                    <p class="produit-description">
+                        Bouteille d'eau minérale.
+                    </p>
+
+                    <div class="produit-footer">
+
+                        <span class="prix">
+                            0,50 €
+                        </span>
+
+                        <span class="stock disponible">
+                            Disponible
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================
+         POPUP PRODUIT
+         Une seule popup pour TOUS
+         les produits
+    ========================== -->
+
+    <div
+        class="modal-produit"
+        id="modal-produit">
+
+
+        <div class="modal-contenu">
+
+
+            <!-- CROIX -->
+
+            <button
+                class="modal-fermer"
+                onclick="fermerProduit()"
+                aria-label="Fermer">
+
+                ×
+
+            </button>
+
+
+            <!-- GALERIE -->
+
+            <div class="modal-galerie">
+
+                <img
+                    id="modal-image-principale"
+                    class="modal-image-principale"
+                    src=""
+                    alt="Produit">
+
+
+                <div
+                    class="modal-miniatures"
+                    id="modal-miniatures">
+                </div>
+
+            </div>
+
+
+            <!-- INFORMATIONS -->
+
+            <div class="modal-infos">
+
+                <p class="petit-titre">
+                    Boissons
+                </p>
+
+                <h2 id="modal-nom"></h2>
+
+
+                <p
+                    class="modal-description"
+                    id="modal-description">
+                </p>
+
+
+                <p
+                    class="modal-prix"
+                    id="modal-prix">
+                </p>
+
+
+                <span
+                    class="stock disponible"
+                    id="modal-stock">
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
