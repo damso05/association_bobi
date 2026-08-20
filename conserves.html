@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>🥫 Conserves - Bobi</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                <h1>Bobi</h1>
+                <span>Association Humanitaire</span>
+            </div>
+
+            <a href="index.html" class="btn btn-primary">
+                ← Retour à l'accueil
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         CATALOGUE
+    ========================== -->
+
+    <main class="catalogue">
+
+        <div class="section-title">
+
+            <p>Notre épicerie solidaire</p>
+
+            <h2>🥫 Conserves disponibles</h2>
+
+        </div>
+
+
+        <p class="catalogue-intro">
+            Découvrez les conserves actuellement disponibles.
+            Les stocks peuvent évoluer selon les arrivages.
+        </p>
+
+
+        <div class="produits-grid">
+
+
+           <div class="produit-card">
+
+    <img
+        src="images/conserves/haricots.jpg"
+        alt="Haricots verts">
+
+    <div class="produit-content">
+
+        <h3>Haricots verts</h3>
+
+        <p class="produit-description">
+            Boîte de haricots verts.
+        </p>
+
+        <div class="produit-footer">
+            <span class="prix">0,80 €</span>
+            <span class="stock disponible">Disponible</span>
+        </div>
+
+        <button
+            class="btn-produit"
+            onclick="ouvrirProduit(
+                'Haricots verts',
+                '0,80 €',
+                'Boîte de haricots verts.',
+                'Disponible',
+                [
+                    'images/conserves/haricots.jpg'
+                ]
+            )">
+
+            Voir le produit
+
+        </button>
+
+    </div>
+
+</div>
+
+ <!-- =========================
+                 petits poids
+            ========================== -->
+
+            <div class="produit-card">
+
+                <img
+                    src="images/conserves/petitspoids.jpg"
+                    alt="petitspoids">
+
+                <div class="produit-content">
+
+                    <h3>Petits poids</h3>
+
+                    <p class="produit-description">
+                        petitspoids.
+                    </p>
+
+                    <div class="produit-footer">
+
+                        <span class="prix">
+                            1 €
+                        </span>
+
+                        <span class="stock disponible">
+                            Disponible
+                        </span>
+
+                    </div>
+                    <button
+                        class="btn-produit"
+                        onclick="ouvrirProduit(
+                            'petitspoids',
+                            '1 €',
+                            'petitspoids en conserves.',
+                            'Disponible',
+                            [
+                                'images/conserves/petitspoids.jpg',
+                                
+                            ]
+                        )">
+
+                        Voir le produit
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- =========================
+                 petits poids
+            ========================== -->
+
+            <div class="produit-card">
+
+                <img
+                    src="images/conserves/lentilles1.jpg"
+                    alt="lentilles">
+
+                <div class="produit-content">
+
+                    <h3>lentilles</h3>
+
+                    <p class="produit-description">
+                        Lentilles.
+                    </p>
+
+                    <div class="produit-footer">
+
+                        <span class="prix">
+                            1 €
+                        </span>
+
+                        <span class="stock disponible">
+                            Disponible
+                        </span>
+
+                    </div>
+                    <button
+                        class="btn-produit"
+                        onclick="ouvrirProduit(
+                            'Lentilles',
+                            '1 €',
+                            'Lentilles en conserves.',
+                            'Disponible',
+                            [
+                                'images/conserves/lentilles1.jpg',
+                                'images/conserves/lentilles2.jpg',
+                                'images/conserves/lentilles3.jpg'
+                                
+                            ]
+                        )">
+
+                        Voir le produit
+
+                    </button>
+
+                </div>
+
+            </div>
+           
+
+
+
+    <!-- =========================
+         POPUP PRODUIT
+         Une seule popup pour TOUS
+         les produits
+    ========================== -->
+
+    <div
+        class="modal-produit"
+        id="modal-produit">
+
+
+        <div class="modal-contenu">
+
+
+            <!-- CROIX -->
+
+            <button
+                class="modal-fermer"
+                onclick="fermerProduit()"
+                aria-label="Fermer">
+
+                ×
+
+            </button>
+
+
+            <!-- GALERIE -->
+
+            <div class="modal-galerie">
+
+                <img
+                    id="modal-image-principale"
+                    class="modal-image-principale"
+                    src=""
+                    alt="Produit">
+
+
+                <div
+                    class="modal-miniatures"
+                    id="modal-miniatures">
+                </div>
+
+            </div>
+
+
+            <!-- INFORMATIONS -->
+
+            <div class="modal-infos">
+
+                <p class="petit-titre">
+                    Boissons
+                </p>
+
+                <h2 id="modal-nom"></h2>
+
+
+                <p
+                    class="modal-description"
+                    id="modal-description">
+                </p>
+
+
+                <p
+                    class="modal-prix"
+                    id="modal-prix">
+                </p>
+
+
+                <span
+                    class="stock disponible"
+                    id="modal-stock">
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
