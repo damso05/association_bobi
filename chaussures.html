@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sport à domicile - Bobi</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                <h1>Bobi</h1>
+                <span>Association Humanitaire</span>
+            </div>
+
+            <a href="index.html" class="btn btn-primary">
+                ← Retour à l'accueil
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         CATALOGUE
+    ========================== -->
+
+    <main class="catalogue">
+
+        <div class="section-title">
+            <p>Notre épicerie solidaire</p>
+            <h2>🏋️ Sport à domicile</h2>
+        </div>
+
+        <p class="catalogue-intro">
+            Découvrez les machines actuellement disponibles.
+            Les stocks peuvent évoluer selon les arrivages.
+        </p>
+
+
+        <div class="produits-grid">
+
+            <!-- =========================
+               banc abdos
+            ========================== -->
+
+            <div class="produit-card">
+
+                <img
+                    src="images/chaussures/bancabdos.jpg"
+                    alt="banc pour abdos">
+
+                <div class="produit-content">
+
+                    <h3>banc abdos</h3>
+
+                    <p class="produit-description">
+                        banc abdos.
+                    </p>
+
+                    <div class="produit-footer">
+
+                        <span class="prix">
+                            30 €
+                        </span>
+
+                        <span class="stock disponible">
+                            Disponible
+                        </span>
+
+                    </div>
+
+                    <button
+                        class="btn-produit"
+                        onclick="ouvrirProduit(
+                            'banc abdos',
+                            '30 €',
+                            'banc abdos.',
+                            'Disponible',
+                            [
+                                'images/chaussures/bancabdos.jpg',
+                                'images/chaussures/bancabdos2.jpg',
+                                
+                            ]
+                        )">
+
+                        Voir le produit
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            
+        <div class="produits-grid">
+
+            <!-- =========================
+                 machine jambe
+            ========================== -->
+
+            <div class="produit-card">
+
+                <img
+                    src="images/chaussures/machinejambe.jpg"
+                    alt="banc pour les jambes">
+
+                <div class="produit-content">
+
+                    <h3>machine pour jambes</h3>
+
+                    <p class="produit-description">
+                        machine pour jambes.
+                    </p>
+
+                    <div class="produit-footer">
+
+                        <span class="prix">
+                            30 €
+                        </span>
+
+                        <span class="stock disponible">
+                            Disponible
+                        </span>
+
+                    </div>
+
+                    <button
+                        class="btn-produit"
+                        onclick="ouvrirProduit(
+                            'machine pour jambes',
+                            '30 €',
+                            'machine pour jambes.',
+                            'Disponible',
+                            [
+                                'images/chaussures/machinejambe.jpg',
+                                'images/chaussures/machinejambe2.jpg',
+                                
+                            ]
+                        )">
+
+                        Voir le produit
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="produits-grid">
+
+            <!-- =========================
+                ministepper
+            ========================== -->
+
+            <div class="produit-card">
+
+                <img
+                    src="images/chaussures/ministepper.jpg"
+                    alt="ministepper">
+
+                <div class="produit-content">
+
+                    <h3>ministepper</h3>
+
+                    <p class="produit-description">
+                        ministepper.
+                    </p>
+
+                    <div class="produit-footer">
+
+                        <span class="prix">
+                            30 €
+                        </span>
+
+                        <span class="stock disponible">
+                            Disponible
+                        </span>
+
+                    </div>
+
+                    <button
+                        class="btn-produit"
+                        onclick="ouvrirProduit(
+                            'ministepper',
+                            '30 €',
+                            'ministeppers.',
+                            'Disponible',
+                            [
+                                'images/chaussures/ministepper.jpg',
+                                'images/chaussures/ministepper2.jpg',
+                                
+                            ]
+                        )">
+
+                        Voir le produit
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            
+
+            
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================
+         POPUP PRODUIT
+    ========================== -->
+
+    <div
+        class="modal-produit"
+        id="modal-produit">
+
+        <div class="modal-contenu">
+
+            <!-- BOUTON FERMER -->
+
+            <button
+                class="modal-fermer"
+                onclick="fermerProduit()"
+                aria-label="Fermer">
+
+                ×
+
+            </button>
+
+
+            <!-- GALERIE PHOTOS -->
+
+            <div class="modal-galerie">
+
+                <img
+                    id="modal-image-principale"
+                    class="modal-image-principale"
+                    src=""
+                    alt="Produit">
+
+                <div
+                    class="modal-miniatures"
+                    id="modal-miniatures">
+                </div>
+
+            </div>
+
+
+            <!-- INFORMATIONS PRODUIT -->
+
+            <div class="modal-infos">
+
+                <p class="petit-titre">
+                    Alimentaire
+                </p>
+
+                <h2 id="modal-nom"></h2>
+
+                <p
+                    class="modal-description"
+                    id="modal-description">
+                </p>
+
+                <p
+                    class="modal-prix"
+                    id="modal-prix">
+                </p>
+
+                <span
+                    class="stock disponible"
+                    id="modal-stock">
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
