@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>accessoires et bijoux - Bobi</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                <h1>Bobi</h1>
+                <span>Association Humanitaire</span>
+            </div>
+
+            <a href="index.html" class="btn btn-primary">
+                ← Retour à l'accueil
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         CATALOGUE
+    ========================== -->
+
+    <main class="catalogue">
+
+        <div class="section-title">
+            <p>Notre épicerie solidaire</p>
+            <h2>accessoires et bijoux</h2>
+        </div>
+
+        <p class="catalogue-intro">
+            Découvrez les accessoires et bijoux actuellement disponibles.
+            Les stocks peuvent évoluer selon les arrivages.
+        </p>
+
+        <div class="produits-grid">
+
+            <!-- =========================
+                 boucle
+            ========================== -->
+
+            <div class="produit-card">
+
+                <img
+                    src="images/bijoux/boucle.jpg"
+                    alt="puces d'oreilles">
+
+                <div class="produit-content">
+
+                    <h3>Puces d'oreilles</h3>
+
+                    <p class="produit-description">
+                        différentes boucles d'oreilles .
+                    </p>
+
+                    <div class="produit-footer">
+
+                        <span class="prix">
+                            2,50 € la plaque de 9 
+                        </span>
+
+                        <span class="stock disponible">
+                            Disponible
+                        </span>
+
+                    </div>
+
+                    <button
+                        class="btn-produit"
+                        onclick="ouvrirProduit(
+                            'puces d oreilles',
+                            '2,50 € la plaque de 9 €',
+                            'puces d oreilles.',
+                            'Disponible',
+                            [
+                                'images/bijoux/boucle.jpg',
+                                'images/bijoux/boucle2.jpg',
+                            ]
+                        )">
+
+                        Voir le produit
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 bague
+            ========================== -->
+
+            <div class="produit-card">
+
+                <img
+                    src='images/bijoux/bague1.jpg',
+                    alt="produits hygiéniques">
+
+                <div class="produit-content">
+
+                    <h3>Bagues</h3>
+
+                    <p class="produit-description">
+                        Bagues en tout genre.
+                        résistantes à l'eau.
+                    </p>
+
+                    <div class="produit-footer">
+
+                        <span class="prix">
+                           1 €
+                        </span>
+
+                        <span class="stock disponible">
+                            Disponible
+                        </span>
+
+                    </div>
+
+                    <button
+                        class="btn-produit"
+                        onclick="ouvrirProduit(
+                            'Bagues',
+                            '1 €',
+                            'Bagues.',
+                            'Disponible',
+                            [
+                                'images/bijoux/bague1.jpg',
+                                'images/bijoux/bague2.jpg',
+                                'images/bijoux/bague3.jpg',
+                            ]
+                        )">
+
+                        Voir le produit
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+          
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================
+         POPUP PRODUIT
+    ========================== -->
+
+    <div class="modal-produit" id="modal-produit">
+
+        <div class="modal-contenu">
+
+            <button
+                class="modal-fermer"
+                onclick="fermerProduit()"
+                aria-label="Fermer">
+
+                ×
+
+            </button>
+
+            <div class="modal-galerie">
+
+                <img
+                    id="modal-image-principale"
+                    class="modal-image-principale"
+                    src=""
+                    alt="Produit">
+
+                <div
+                    class="modal-miniatures"
+                    id="modal-miniatures">
+                </div>
+
+            </div>
+
+            <div class="modal-infos">
+
+                <p class="petit-titre">
+                    Accessoires et bijoux
+                </p>
+
+                <h2 id="modal-nom"></h2>
+
+                <p
+                    class="modal-description"
+                    id="modal-description">
+                </p>
+
+                <p
+                    class="modal-prix"
+                    id="modal-prix">
+                </p>
+
+                <span
+                    class="stock disponible"
+                    id="modal-stock">
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

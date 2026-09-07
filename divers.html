@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Coin des bonnes affaires - Bobi</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                <h1>Bobi</h1>
+                <span>Association Humanitaire</span>
+            </div>
+
+            <a href="index.html" class="btn btn-primary">
+                ← Retour à l'accueil
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         CATALOGUE
+    ========================== -->
+
+    <main class="catalogue">
+
+        <div class="section-title">
+            <p>Notre épicerie solidaire</p>
+            <h2>Coin des bonnes affaires</h2>
+        </div>
+
+        <p class="catalogue-intro">
+            Découvrez le Coin des bonnes affaires actuellement disponibles.
+            Les stocks peuvent évoluer selon les arrivages.
+        </p>
+
+        <div class="produits-grid">
+
+            <!-- =========================
+                 salon
+            ========================== -->
+
+            <div class="produit-card">
+
+                <img
+                    src="images/divers/salon.jpg"
+                    alt="Salon en rotin">
+
+                <div class="produit-content">
+
+                    <h3>Salon en rotin</h3>
+
+                    <p class="produit-description">
+                        Salon en rotin. 
+                        D'une valeur de 850 €.
+                    </p>
+
+                    <div class="produit-footer">
+
+                        <span class="prix">
+                            250 € 
+                        </span>
+
+                        <span class="stock disponible">
+                            Disponible
+                        </span>
+
+                    </div>
+
+                    <button
+                        class="btn-produit"
+                        onclick="ouvrirProduit(
+                            'Salon en rotin',
+                            '250 €',
+                            'Salon en rotin.',
+                            'Disponible',
+                            [
+                                'images/divers/salon.jpg',
+                                
+                            ]
+                        )">
+
+                        Voir le produit
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 vasque
+            ========================== -->
+
+            <div class="produit-card">
+
+                <img
+                    src='images/divers/vasque.jpg',
+                    alt="meuble avec vasque et mirroir">
+
+                <div class="produit-content">
+
+                    <h3>meuble avec vasque et mirroir</h3>
+
+                    <p class="produit-description">
+                        Vasque et mirroir.
+                        Salle de bain.
+                    </p>
+
+                    <div class="produit-footer">
+
+                        <span class="prix">
+                           100 €
+                        </span>
+
+                        <span class="stock disponible">
+                            Disponible
+                        </span>
+
+                    </div>
+
+                    <button
+                        class="btn-produit"
+                        onclick="ouvrirProduit(
+                            'meuble avec vasque et mirroir',
+                            '100 €',
+                            'meuble avec vasque et mirroir.',
+                            'Disponible',
+                            [
+                                'images/divers/vasque.jpg',
+                                
+                            ]
+                        )">
+
+                        Voir le produit
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+
+             <!-- =========================
+                 Coiffeuse
+            ========================== -->
+
+            <div class="produit-card">
+
+                <img
+                    src='images/divers/coiffeuse.jpg',
+                    alt="Coiffeuse">
+
+                <div class="produit-content">
+
+                    <h3>Coiffeuse</h3>
+
+                    <p class="produit-description">
+                        Coiffeuse avec branchement.
+                        
+                    </p>
+
+                    <div class="produit-footer">
+
+                        <span class="prix">
+                           50 €
+                        </span>
+
+                        <span class="stock disponible">
+                            Disponible
+                        </span>
+
+                    </div>
+
+                    <button
+                        class="btn-produit"
+                        onclick="ouvrirProduit(
+                            'Coiffeuse',
+                            '100 €',
+                            'Coiffeuse.',
+                            'Disponible',
+                            [
+                                'images/divers/coiffeuse.jpg',
+                                'images/divers/coiffeuse2.jpg',
+                                'images/divers/coiffeuse3.jpg',
+                                
+                            ]
+                        )">
+
+                        Voir le produit
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================
+                 Collection
+            ========================== -->
+
+            <div class="produit-card">
+
+                <img
+                    src='images/divers/collection.jpg',
+                    alt="Objets de collection">
+
+                <div class="produit-content">
+
+                    <h3>Objets de collection</h3>
+
+                    <p class="produit-description">
+                        Plusieurs objets de collection.
+                        Pour les collectionneurs.
+                        
+                    </p>
+
+                    <div class="produit-footer">
+
+                        <span class="prix">
+                         
+                        </span>
+
+                        <span class="stock disponible">
+                            Disponible
+                        </span>
+
+                    </div>
+
+                    <button
+                        class="btn-produit"
+                        onclick="ouvrirProduit(
+                            'Objets de collection',
+                            '',
+                            'Objets de collection.',
+                            'Disponible',
+                            [
+                                'images/divers/collection.jpg',
+                                'images/divers/collection2.jpg',
+                                
+                                
+                            ]
+                        )">
+
+                        Voir le produit
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+              <!-- =========================
+                 ampoule
+            ========================== -->
+
+            <div class="produit-card">
+
+                <img
+                    src='images/divers/ampoule.jpg',
+                    alt="ampoule">
+
+                <div class="produit-content">
+
+                    <h3>ampoule</h3>
+
+                    <p class="produit-description">
+                        Différentes ampoules.
+                        plusieurs modèles.
+                        
+                    </p>
+
+                    <div class="produit-footer">
+
+                        <span class="prix">
+                           1 € pièce/ 0,50 € plusieurs
+                        </span>
+
+                        <span class="stock disponible">
+                            Disponible
+                        </span>
+
+                    </div>
+
+                    <button
+                        class="btn-produit"
+                        onclick="ouvrirProduit(
+                            'ampoule',
+                            '1 € pièce/ 0,50 € plusieurs',
+                            'ampoule.',
+                            'Disponible',
+                            [
+                                'images/divers/ampoule.jpg',
+                                'images/divers/ampoule2.jpg',
+                                
+                                
+                            ]
+                        )">
+
+                        Voir le produit
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================
+                 ampoule
+            ========================== -->
+
+            <div class="produit-card">
+
+                <img
+                    src='images/divers/pile.jpg',
+                    alt="pile">
+
+                <div class="produit-content">
+
+                    <h3>Piles</h3>
+
+                    <p class="produit-description">
+                        Différentes Piles.
+                        plusieurs modèles.
+                        
+                    </p>
+
+                    <div class="produit-footer">
+
+                        <span class="prix">
+                           
+                        </span>
+
+                        <span class="stock disponible">
+                            Disponible
+                        </span>
+
+                    </div>
+
+                    <button
+                        class="btn-produit"
+                        onclick="ouvrirProduit(
+                            'Piles',
+                            '',
+                            'ampoule.',
+                            'Piles',
+                            [
+                                'images/divers/pile.jpg',
+                                'images/divers/pile2.jpg',
+                                
+                                
+                            ]
+                        )">
+
+                        Voir le produit
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+          
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================
+         POPUP PRODUIT
+    ========================== -->
+
+    <div class="modal-produit" id="modal-produit">
+
+        <div class="modal-contenu">
+
+            <button
+                class="modal-fermer"
+                onclick="fermerProduit()"
+                aria-label="Fermer">
+
+                ×
+
+            </button>
+
+            <div class="modal-galerie">
+
+                <img
+                    id="modal-image-principale"
+                    class="modal-image-principale"
+                    src=""
+                    alt="Produit">
+
+                <div
+                    class="modal-miniatures"
+                    id="modal-miniatures">
+                </div>
+
+            </div>
+
+            <div class="modal-infos">
+
+                <p class="petit-titre">
+                    Accessoires et bijoux
+                </p>
+
+                <h2 id="modal-nom"></h2>
+
+                <p
+                    class="modal-description"
+                    id="modal-description">
+                </p>
+
+                <p
+                    class="modal-prix"
+                    id="modal-prix">
+                </p>
+
+                <span
+                    class="stock disponible"
+                    id="modal-stock">
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
