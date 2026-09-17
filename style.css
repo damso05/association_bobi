@@ -128,7 +128,7 @@ header {
 .btn {
     display: inline-block;
 
-    padding: 15px 25px;
+    padding: 35px 25px 5px 25px;
 
     text-decoration: none;
 
@@ -1119,4 +1119,22 @@ header {
     .produits-grid {
         grid-template-columns: 1fr;
     }
+}
+.btn-benevole {
+    padding: 30px 70px;
+    font-size: 28px;
+    min-width: 420px;
+    min-height: 100px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #ecf0ee;
+    border: 3px solid #26734d;
+    border-radius: 12px;
+
+    text-decoration: none;
+    background-color: #237b4b;
+    font-weight: bold;
 }
